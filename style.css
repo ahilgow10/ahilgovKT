@@ -1,0 +1,82 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow: hidden;
+    background: skyblue;
+}
+
+.scene {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.sun {
+    position: absolute;
+    top: 50px;
+    right: 50px;
+    width: 100px;
+    height: 100px;
+    background: yellow;
+    border-radius: 50%;
+    box-shadow: 0 0 50px yellow;
+}
+
+.road {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 100px;
+    background: gray;
+}
+
+.car {
+    position: absolute;
+    bottom: 50px;
+    left: -200px;
+    width: 200px;
+    height: 100px;
+    animation: drive 4s forwards;
+}
+
+.car .body {
+    position: absolute;
+    width: 100%;
+    height: 60px;
+    background: blue;
+    border-radius: 15px;
+}
+
+.car .wheel {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background: black;
+    border-radius: 50%;
+    bottom: -20px;
+}
+
+.car .wheel-front {
+    left: 20px;
+}
+
+.car .wheel-back {
+    right: 20px;
+}
+
+/* .tree {
+    position: absolute;
+    bottom: 100px;
+    left: 50px;
+    width: 50px;
+    height: 150px;
+    background: green;
+    border-radius: 25px;
+} */
+
+@keyframes drive {
+    to {
+        left: calc(100% - 250px);
+    }
+}
